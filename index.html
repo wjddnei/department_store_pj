@@ -7,9 +7,13 @@
   <title>Document</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=PT+Serif:wght@700&display=swap" rel="stylesheet">
-
+  
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
   <link rel="stylesheet" href="./css/main.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="./js/main.js" defer></script>
 </head>
 <body>
   <header class="title">
@@ -18,29 +22,373 @@
         <img src="https://via.placeholder.com/300x100">
       </div>
       <nav class="menu">
-        <ul class="title_menu">
-          <a href="javascript:void(0)"><li>지점안내</li></a>
-          <a href="javascript:void(0)"><li>쇼핑정보</li></a>
-          <a href="javascript:void(0)"><li>브랜드</li></a>
-          <a href="javascript:void(0)"><li>문화서비스</li></a>
-          <a href="javascript:void(0)"><li>고객서비스</li></a>
+        <ul class="main-menu">
+          <li class="item">
+            <div class="item__name"><a href="javascript:void(0)">지점안내</a></div>
+            <div class="item__contents">
+            <ul class="inner">
+              <li>
+                <h2>서울점</h2>
+                <ul>
+                  <li>잠실점</li>
+                  <li>본점</li>
+                  <li>강남점</li>
+                  <li>건대스타시티점</li>
+                  <li>관악점</li>
+                  <li>김포공항점</li>
+                  <li>노원점</li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li>미아점</li>
+                  <li>영등포점</li>
+                  <li>청량리점</li>
+                  <li>캐슬플라자(잠실)</li>
+                </ul>
+              </li>
+              <li>
+                <h2>수도권점</h2>
+                <ul>
+                  <li>인천점</li>
+                  <li>동탄점</li>
+                  <li>구리점</li>
+                  <li>분당점</li>
+                  <li>수원점</li>
+                  <li>안산점</li>
+                  <li>일산점</li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li>중동점</li>
+                  <li>평촌점</li>
+                </ul>
+              </li>
+              <li>
+                <h2>지방점</h2>
+                <ul>
+                  <li>부산본점</li>
+                  <li>광복점</li>
+                  <li>광주점</li>
+                  <li>대구점</li>
+                  <li>대전점</li>
+                  <li>동래점</li>
+                  <li>마산점</li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li>상인점</li>
+                  <li>센텀시티점</li>
+                  <li>울산점</li>
+                  <li>전주점</li>
+                  <li>창원점</li>
+                  <li>포항점</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          </li>
+          <li class="item">
+            <div class="item__name">쇼핑정보</div>
+            <div class="item__contents">
+              <ul class="inner">
+                <li>
+                  <h2>서울점</h2>
+                  <ul>
+                    <li>잠실점</li>
+                    <li>본점</li>
+                    <li>강남점</li>
+                    <li>건대스타시티점</li>
+                    <li>관악점</li>
+                    <li>김포공항점</li>
+                    <li>노원점</li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li>미아점</li>
+                    <li>영등포점</li>
+                    <li>청량리점</li>
+                    <li>캐슬플라자(잠실)</li>
+                  </ul>
+                </li>
+                <li>
+                  <h2>수도권점</h2>
+                  <ul>
+                    <li>인천점</li>
+                    <li>동탄점</li>
+                    <li>구리점</li>
+                    <li>분당점</li>
+                    <li>수원점</li>
+                    <li>안산점</li>
+                    <li>일산점</li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li>중동점</li>
+                    <li>평촌점</li>
+                  </ul>
+                </li>
+                <li>
+                  <h2>지방점</h2>
+                  <ul>
+                    <li>부산본점</li>
+                    <li>광복점</li>
+                    <li>광주점</li>
+                    <li>대구점</li>
+                    <li>대전점</li>
+                    <li>동래점</li>
+                    <li>마산점</li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li>상인점</li>
+                    <li>센텀시티점</li>
+                    <li>울산점</li>
+                    <li>전주점</li>
+                    <li>창원점</li>
+                    <li>포항점</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="item">
+            <div class="item__name">브랜드</div>
+            <div class="item__contents">
+              <ul class="inner">
+                <li>
+                  <h2>서울점</h2>
+                  <ul>
+                    <li>잠실점</li>
+                    <li>본점</li>
+                    <li>강남점</li>
+                    <li>건대스타시티점</li>
+                    <li>관악점</li>
+                    <li>김포공항점</li>
+                    <li>노원점</li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li>미아점</li>
+                    <li>영등포점</li>
+                    <li>청량리점</li>
+                    <li>캐슬플라자(잠실)</li>
+                  </ul>
+                </li>
+                <li>
+                  <h2>수도권점</h2>
+                  <ul>
+                    <li>인천점</li>
+                    <li>동탄점</li>
+                    <li>구리점</li>
+                    <li>분당점</li>
+                    <li>수원점</li>
+                    <li>안산점</li>
+                    <li>일산점</li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li>중동점</li>
+                    <li>평촌점</li>
+                  </ul>
+                </li>
+                <li>
+                  <h2>지방점</h2>
+                  <ul>
+                    <li>부산본점</li>
+                    <li>광복점</li>
+                    <li>광주점</li>
+                    <li>대구점</li>
+                    <li>대전점</li>
+                    <li>동래점</li>
+                    <li>마산점</li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li>상인점</li>
+                    <li>센텀시티점</li>
+                    <li>울산점</li>
+                    <li>전주점</li>
+                    <li>창원점</li>
+                    <li>포항점</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="item">
+            <div class="item__name">문화서비스</div>
+            <div class="item__contents">
+              <ul class="inner">
+                <li>
+                  <h2>서울점</h2>
+                  <ul>
+                    <li>잠실점</li>
+                    <li>본점</li>
+                    <li>강남점</li>
+                    <li>건대스타시티점</li>
+                    <li>관악점</li>
+                    <li>김포공항점</li>
+                    <li>노원점</li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li>미아점</li>
+                    <li>영등포점</li>
+                    <li>청량리점</li>
+                    <li>캐슬플라자(잠실)</li>
+                  </ul>
+                </li>
+                <li>
+                  <h2>수도권점</h2>
+                  <ul>
+                    <li>인천점</li>
+                    <li>동탄점</li>
+                    <li>구리점</li>
+                    <li>분당점</li>
+                    <li>수원점</li>
+                    <li>안산점</li>
+                    <li>일산점</li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li>중동점</li>
+                    <li>평촌점</li>
+                  </ul>
+                </li>
+                <li>
+                  <h2>지방점</h2>
+                  <ul>
+                    <li>부산본점</li>
+                    <li>광복점</li>
+                    <li>광주점</li>
+                    <li>대구점</li>
+                    <li>대전점</li>
+                    <li>동래점</li>
+                    <li>마산점</li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li>상인점</li>
+                    <li>센텀시티점</li>
+                    <li>울산점</li>
+                    <li>전주점</li>
+                    <li>창원점</li>
+                    <li>포항점</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="item">
+            <div class="item__name">고객서비스</div>
+            <div class="item__contents">
+              <ul class="inner">
+                <li>
+                  <h2>서울점</h2>
+                  <ul>
+                    <li>잠실점</li>
+                    <li>본점</li>
+                    <li>강남점</li>
+                    <li>건대스타시티점</li>
+                    <li>관악점</li>
+                    <li>김포공항점</li>
+                    <li>노원점</li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li>미아점</li>
+                    <li>영등포점</li>
+                    <li>청량리점</li>
+                    <li>캐슬플라자(잠실)</li>
+                  </ul>
+                </li>
+                <li>
+                  <h2>수도권점</h2>
+                  <ul>
+                    <li>인천점</li>
+                    <li>동탄점</li>
+                    <li>구리점</li>
+                    <li>분당점</li>
+                    <li>수원점</li>
+                    <li>안산점</li>
+                    <li>일산점</li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li>중동점</li>
+                    <li>평촌점</li>
+                  </ul>
+                </li>
+                <li>
+                  <h2>지방점</h2>
+                  <ul>
+                    <li>부산본점</li>
+                    <li>광복점</li>
+                    <li>광주점</li>
+                    <li>대구점</li>
+                    <li>대전점</li>
+                    <li>동래점</li>
+                    <li>마산점</li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li>상인점</li>
+                    <li>센텀시티점</li>
+                    <li>울산점</li>
+                    <li>전주점</li>
+                    <li>창원점</li>
+                    <li>포항점</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <section class="slide">
-    <div class="inner">
-      <div><img src="https://via.placeholder.com/700x600" alt="slide_img_1"></div>
-      <div><img src="https://via.placeholder.com/700x600" alt="slide_img_2"></div>
-      <div><img src="https://via.placeholder.com/700x600" alt="slide_img_3"></div>
+  <section class="promotion">
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="https://via.placeholder.com/1500x600" alt="1번">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://via.placeholder.com/1000x600" alt="2번">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://via.placeholder.com/1300x600" alt="3번">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://via.placeholder.com/1800x600" alt="4번">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://via.placeholder.com/1900x600" alt="5번">
+            </div>
+        </div>
     </div>
-  </section>
+</section>
 
   <section class="guide">
     <div class="inner">
       <div class="guide_img">
-        <img src="https://via.placeholder.com/900x1000" alt="guide_img">
+        <img src="https://via.placeholder.com/900x800" alt="guide_img">
       </div>
     </div>
   </section>
@@ -62,7 +410,7 @@
     </div>
   </section>
   <footer>
-
+    <div class="inner"></div>
   </footer>
 </body>
 </html>
