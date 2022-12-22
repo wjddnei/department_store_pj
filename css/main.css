@@ -1,6 +1,7 @@
 body{
   font-size: 14px;
   font-family: 'Nanum Gothic', sans-serif;
+  z-index: 0;
 }
 a{
   color: black;
@@ -10,17 +11,19 @@ h2{
   font-size: 16px;
   font-weight: 700;
 }
+header{
+  width: 100%;
+  height: 200px;
+  background-color: #fff;
+  transition: height .3s;
+
+  position: fixed;
+  z-index: 1;
+}
 .inner{
   width: 1400px;
   margin: 0 auto;
   position: relative;
-  background-color: #fff;
-}
-header > .inner{
-  width: 100%;
-  height: 150px;
-  position: fixed;
-  z-index: 1;
 }
 header .title_logo{
   text-align: center;
@@ -28,61 +31,60 @@ header .title_logo{
 }
 header .main-menu {
   width: 100%;
-  position: absolute;
-  bottom: 0;
-  z-index: 1;
   display: flex;
   justify-content: center;
 
 }
 header .main-menu .item .item__name {
-  padding: 10px 50px 40px;
-  margin-bottom: -30px;
-  font-size: 14px;
-  display: block;
+  padding: 5px 0;
+  margin: 0 35px;
+  border-bottom: 2px solid transparent;
+  font-size: 16px;
 }
 header .main-menu .item:hover .item__name {
   font-weight: 700;
+  border-bottom: 2px solid black;
   cursor: pointer;
 }
 header nav .inner{
   display: flex;
 }
 header .main-menu .item .item__contents {
-  background-color: #fff;
   width: 100%;
-  position: fixed;
+  text-align: center;
+  position: absolute;
   left: 0;
-  display: none;
-}
-header .main-menu .item:hover .item__contents {
-  display: block;
+  opacity: 0;
+  visibility: hidden;
 }
 header .main-menu .item .item__contents > ul {
-  padding: 20px 0;
+  margin-top: 30px;
   display: flex;
+  justify-content: center;
 }
 header .main-menu .item .item__contents > ul > li {
-  width: 220px;
+  width: 1200px;
 }
 header .main-menu .item .item__contents > ul > li h2 {
-  padding: 3px 0 12px;
-  font-size: 16px;
+  padding-bottom: 10px;
+  font-size: 18px;
   color: #000;
-  font-weight: 700;
+  font-weight: 600;
 }
 header .main-menu .item .item__contents > ul > li ul li {
   padding: 5px 0;
   font-size: 12px;
-  color: #000;
+  color: #c2c2c2;
   cursor: pointer;
 }
 header .main-menu .item .item__contents > ul > li ul li:hover {
   font-weight: 700;
-  text-decoration: underline;
+  color: #000;
 }
 
+/* 슬라이드 */
 .promotion {
+  padding-top: 120px;
   width: 100%;
   background-color: #fff;
   display: flex;
@@ -90,7 +92,7 @@ header .main-menu .item .item__contents > ul > li ul li:hover {
   position: relative;
   transition: height .4s;
   z-index: 0;
-  height: 1000px;
+  height: 800px;
   align-items: center;
   justify-content: center;
 }
@@ -106,26 +108,166 @@ header .main-menu .item .item__contents > ul > li ul li:hover {
   opacity: 1;
 }
 
-
-.guide > .inner{
+/* 층 안내 */
+/* 버튼 클릭시 나타나는 창 위치 나중에 바꾸기 */
+.guide .inner{
+background-color: #fff;
+height: 800px;
 padding: 200px 0;
+position: relative;
 }
 .guide .guide_img{
   text-align: center;
 }
+.material-icons{
+  font-size: 100px;
+  color: #fff;
+  cursor: pointer;
+}
+/* 1층 */
+.guide .one-icons{
+  position: absolute;
+  left: 280px;
+  bottom: 220px;
+}
+.guide .one_guide{
+  width: 600px;
+  border: 2px solid #000;
+  background-color: #fff;
+  position: absolute;
+  bottom: 320px;
+  left: 290px;
+  display: none;
+}
+.guide .one_guide.active{
+  display: block;
+  z-index: 1;
+}
+/* 2층 */
+.guide .two-icons{
+  position: absolute;
+  right : 280px;
+  bottom : 380px;
+}
+.guide .two_guide{
+  width: 600px;
+  border: 2px solid #000;
+  background-color: #fff;
+  position: absolute;
+  bottom: 480px;
+  right: 290px;
+  display: none;
+}
+.guide .two_guide.active{
+  display: block;
+  z-index: 1;
+}
+/* 3층 */
+.guide .thr-icons{
+  position: absolute;
+  left : 280px;
+  bottom : 500px;
+}
+.guide .thr_guide{
+  width: 600px;
+  border: 2px solid #000;
+  background-color: #fff;
+  position: absolute;
+  top: 265px;
+  left: 290px;
+  display: none;
+}
+.guide .thr_guide.active{
+  display: block;
+  z-index: 1;
+}
+/* 4층 */
+.guide .fou-icons{
+  position: absolute;
+  right : 280px;
+  top : 430px;
+}
+.guide .fou_guide{
+  width: 600px;
+  border: 2px solid #000;
+  background-color: #fff;
+  position: absolute;
+  top: 100px;
+  right: 290px;
+  display: none;
+}
+.guide .fou_guide.active{
+  display: block;
+  z-index: 1;
+}
+/* 5층 */
+.guide .five-icons{
+  position: absolute;
+  left : 280px;
+  top : 300px;
+}
+.guide .fiv_guide{
+  width: 600px;
+  border: 2px solid #000;
+  background-color: #fff;
+  position: absolute;
+  top: -30px;
+  left: 290px;
+  display: none;
+}
+.guide .fiv_guide.active{
+  display: block;
+  z-index: 1;
+}
+
+
+/* 브랜드 광고 */
+/* 애니메이션 */
+.back-to-position{
+  opacity: 0;
+  transition-duration: 1s;
+}
+.show .back-to-position{
+  opacity: 1;
+  transform: translateX(0);
+}
+.show .back-to-position.delay-1{
+  transition-delay: 1s;
+}
+.show .back-to-position.delay-2{
+  transition-delay: 1.8s;
+}
+.show .back-to-position.delay-3{
+  transition-delay: 2.6s;
+}
+.show .back-to-position.delay-4{
+  transition-delay: 3.4s;
+}
+.show .back-to-position.delay-5{
+  transition-delay: 4.2s;
+}
+
+
 .shop .inner{
   display: flex;
-  justify-content: space-around;
+  z-index: -2;
+  justify-content: space-between;
+  margin-top: 100px;
 }
 .shop .left_item{
-  background-color: red;
-  width: 500px;
+  width: 700px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  z-index: -2;
 }
+.shop .left_item li:nth-child(even){
+  padding: 450px 0 50px;
+}
+
+
 footer .inner{
   width: 100%;
   height: 300px;
-  background-color: bisque;
+  background-color:aqua;
 }

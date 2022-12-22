@@ -7,12 +7,15 @@
   <title>Document</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=PT+Serif:wght@700&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
-  <link rel="stylesheet" href="./css/main.css">
-
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./css/main.css">
+  
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js" integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollToPlugin.min.js" integrity="sha512-Eenw6RBFiF4rO89LCaB5fkd4WXI4Y7GSRxrLMMWx73dZNcl+dBU3/pJtITD2gTCoEGIf/Ph3spwp0zZnF+UEJg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="./js/main.js" defer></script>
 </head>
 <body>
@@ -387,30 +390,88 @@
 
   <section class="guide">
     <div class="inner">
-      <div class="guide_img">
-        <img src="https://via.placeholder.com/900x800" alt="guide_img">
+      <div class="guide_main">
+        <div class="guide_img">
+          <img src="https://via.placeholder.com/900x800" alt="guide_img">
+        </div>
+        <div class="one-icons">
+          <span class="material-icons">looks_one</span>
+        </div>
+        <div class="two-icons">
+          <span class="material-icons">looks_two</span>
+        </div>
+        <div class="thr-icons">
+          <span class="material-icons">looks_3</span>
+        </div>
+        <div class="fou-icons">
+          <span class="material-icons">looks_4</span>
+        </div>
+        <div class="five-icons">
+          <span class="material-icons">looks_5</span>
+        </div>
+        <div class="one_guide">
+          <div class="guide__list">
+            <h2>1층</h2>
+            <p>층 안내 어쩌구 저쩌구</p>
+            <img src="https://via.placeholder.com/600x300" alt="1층 대표 사진">
+          </div>
+        </div>
+        <div class="two_guide">
+          <div class="guide__list">
+            <h2>2층</h2>
+            <p>층 안내 어쩌구 저쩌구</p>
+            <img src="https://via.placeholder.com/600x300" alt="2층 대표 사진">
+          </div>
+        </div>
+        <div class="thr_guide">
+          <div class="guide__list">
+            <h2>3층</h2>
+            <p>층 안내 어쩌구 저쩌구</p>
+            <img src="https://via.placeholder.com/600x300" alt="3층 대표 사진">
+          </div>
+        </div>
+        <div class="fou_guide">
+          <div class="guide__list">
+            <h2>4층</h2>
+            <p>층 안내 어쩌구 저쩌구</p>
+            <img src="https://via.placeholder.com/600x300" alt="4층 대표 사진">
+          </div>
+        </div>
+        <div class="fiv_guide">
+          <div class="guide__list">
+            <h2>5층</h2>
+            <p>층 안내 어쩌구 저쩌구</p>
+            <img src="https://via.placeholder.com/600x300" alt="5층 대표 사진">
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="shop">
+  <section class="shop scroll-spy">
     <div class="inner">
       <ul class="left_item">
-        <li><img src="https://via.placeholder.com/200x250" alt="img1"></li>
-        <li><img src="https://via.placeholder.com/200x250" alt="img2"></li>
-        <li><img src="https://via.placeholder.com/200x250" alt="img3"></li>
-        <li><img src="https://via.placeholder.com/200x250" alt="img4"></li>
-        <li><img src="https://via.placeholder.com/200x250" alt="img5"></li>
-        <li><img src="https://via.placeholder.com/200x250" alt="img6"></li>
+        <li><img class="img1 back-to-position" src="https://via.placeholder.com/300x400" alt="img1"></li>
+        <li><img class="img2 back-to-position delay-1" src="https://via.placeholder.com/300x400" alt="img2"></li>
+        <li><img class="img3 back-to-position delay-2" src="https://via.placeholder.com/300x400" alt="img3"></li>
+        <li><img class="img4 back-to-position delay-3" src="https://via.placeholder.com/300x400" alt="img4"></li>
+        <li><img class="img5 back-to-position delay-4" src="https://via.placeholder.com/300x400" alt="img5"></li>
+        <li><img class="img6 back-to-position delay-5" src="https://via.placeholder.com/300x400" alt="img6"></li>
       </ul>
       <ul class="rigth_item">
-        <li><img src="https://via.placeholder.com/300x600" alt="img"></li>
-        <li></li>
+        <li><img src="https://via.placeholder.com/500x700" alt="img"></li>
+        <li><img src="https://via.placeholder.com/500x700" alt="img"></li>
+        <li><img src="https://via.placeholder.com/500x700" alt="img"></li>
+        <li><img src="https://via.placeholder.com/500x700" alt="img"></li>
       </ul>
     </div>
   </section>
   <footer>
-    <div class="inner"></div>
+    <div class="inner">
+      <div class="text_inner">
+
+      </div>
+    </div>
   </footer>
 </body>
 </html>
