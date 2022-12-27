@@ -34,8 +34,12 @@ h2{
   position: absolute;
   display: none;
 }
-.guide_main .guide-group .guide__list img{
+
+.guide_main .guide-group img{
+  position: absolute;
+  bottom: 0;
   width: 1000px;
+  height: 600px;
   object-fit: cover;
 }
 .icons-group > .material-icons{
@@ -57,7 +61,7 @@ h2{
 /* 해더 */
 header{
   width: 100%;
-  height: 200px;
+  height: 150px;
   background-color: #fff;
   transition: height .3s;
 
@@ -88,12 +92,15 @@ header nav .inner{
   display: flex;
 }
 header .main-menu .item .item__contents {
+  background-color: #fff;
   width: 100%;
   text-align: center;
   position: absolute;
   left: 0;
-  opacity: 0;
-  visibility: hidden;
+  display: none;
+}
+header .main-menu .item:hover > .item__contents {
+display: block;
 }
 header .main-menu .item .item__contents > ul {
   margin-top: 30px;
@@ -212,7 +219,7 @@ header .main-menu .item .item__contents > ul > li ul li:hover {
 .shop .rigth_item li{
   position: sticky;
   height: 850px;
-  top: 150px;
+  top: 230px;
 }
 .shop .rigth_item img{
   width: 500px;
