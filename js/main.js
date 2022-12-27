@@ -34,16 +34,23 @@ headerEl.addEventListener('mouseleave', function () {
 const iconsEls = document.querySelectorAll('.icons-group');
 const guideEls = document.querySelectorAll('.guide-group');
 
+// 반복되게 만들기
 iconsEls.forEach(function(iconsEl){
-  iconsEl.addEventListener('click',function(){
+iconsEl.addEventListener('click',function(){
     guideEls.forEach(function(guideEl){
-      guideEl.classList.remove('active');
+        guideEl.classList.remove('active');
     });
     iconsEl.nextElementSibling.classList.add('active');
-  });
+    iconsEl.addEventListener('click',function(){
+        guideEls.forEach(function(guideEl){
+            guideEl.classList.remove('hide');
+        });
+        iconsEl.nextElementSibling.classList.add('hide');
+    });
+});
 });
 
-const spyEls = document.querySelectorAll('section.scroll-spy');
+const spyEls = document.querySelectorAll('.scroll-spy');
 spyEls.forEach(function (spyEl) {
     new ScrollMagic
         .Scene({triggerElement: spyEl, triggerHook: 0.8})

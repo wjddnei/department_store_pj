@@ -15,42 +15,43 @@ h2{
 /* 애니메이션 */
 .back-to-position{
   opacity: 0;
-  transition-duration: 1s;
+  transition-duration: 2s;
 }
 .show .back-to-position{
   opacity: 1;
   transform: translateX(0);
 }
-.show .back-to-position.delay-1{
-  transition-delay: 1s;
-}
-.show .back-to-position.delay-2{
-  transition-delay: 1.8s;
-}
-.show .back-to-position.delay-3{
-  transition-delay: 2.6s;
-}
-.show .back-to-position.delay-4{
-  transition-delay: 3.4s;
-}
-.show .back-to-position.delay-5{
-  transition-delay: 4.2s;
-}
+/* 층별 안내 */
 .guide_main .guide-group{
-  width: 600px;
+  position: relative;
+  width: 1000px;
   height: 700px;
+  overflow: hidden;
   border: 2px solid #000;
   background-color: #fff;
+  right: 130px;
+  bottom: 50px;
   position: absolute;
-  bottom: 250px;
-  left: 400px;
   display: none;
 }
+.guide_main .guide-group .guide__list img{
+  width: 1000px;
+  object-fit: cover;
+}
+.icons-group > .material-icons{
+  font-size: 100px;
+  color: #fff;
+  cursor: pointer;
+}
+.icons-group{
+  position: absolute;
+  left: 50px;
+}
 .guide_main .guide-group.active{
-display: block;
+  display: block;
 }
 .guide_main .guide-group.hide{
-z-index: -1;
+  display: none;
 }
 
 /* 해더 */
@@ -143,94 +144,80 @@ header .main-menu .item .item__contents > ul > li ul li:hover {
 }
 .promotion img{
   width: 1910px;
+  height: 800px;
   object-fit: cover;
 }
 
 /* 층 안내 */
-/* 버튼 클릭시 나타나는 창 위치 나중에 바꾸기 */
-
 .guide .inner{
-padding: 200px 0;
-position: relative;
+  padding: 200px 0;
 }
-.guide .guide_img{
-  text-align: center;
+.guide img{
+  width: 100%;
+  height: 800px;
+  object-fit: cover;
 }
-.material-icons{
-  font-size: 100px;
-  color: #fff;
-  cursor: pointer;
+.guide .guide_main{
+  position: relative;
 }
-
-/* 1층 */
 .guide .one-icons{
-  position: absolute;
-  left: 280px;
-  bottom: 250px;
+  bottom: 50px;
 }
-
-/* .guide .one_guide.active{
-  display: block;
-  z-index: 1;
-} */
-/* 2층 */
 .guide .two-icons{
-  position: absolute;
-  right : 280px;
-  bottom : 400px;
+  bottom : 200px;
 }
-/* .guide .two_guide.active{
-  display: block;
-  z-index: 1;
-} */
-/* 3층 */
 .guide .thr-icons{
-  position: absolute;
-  left : 280px;
-  bottom : 550px;
+  bottom : 350px;
 }
-/* .guide .thr_guide.active{
-  display: block;
-  z-index: 1;
-} */
-/* 4층 */
 .guide .fou-icons{
-  position: absolute;
-  right : 280px;
-  top : 400px;
+  bottom : 500px;
 }
-/* .guide .fou_guide.active{
-  display: block;
-  z-index: 1;
-} */
-/* 5층 */
 .guide .five-icons{
-  position: absolute;
-  left : 280px;
-  top : 250px;
+  bottom : 650px;
 }
-/* .guide .fiv_guide.active{
-  display: block;
-  z-index: 1;
-} */
-
 
 /* 브랜드 광고 */
 .shop .inner{
+  width: 100%;
   display: flex;
   z-index: -2;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin-top: 100px;
 }
 .shop .left_item{
-  width: 700px;
+  position: relative;
+  width: 800px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  z-index: -2;
+}
+.shop .left_item .img1, .img4, .img5, .img8, .img9{
+  width: 350px;
+  height: 400px;
+  object-fit: cover;
+}
+.shop .left_item .img2, .img3, .img6, .img7, .img10{
+  width: 350px;
+  height: 350px;
+  border-radius: 170px;
+  object-fit: cover;
 }
 .shop .left_item li:nth-child(even){
-  padding: 450px 0 50px;
+  margin-top: 200px;
+}
+.shop .rigth_item{
+  position: relative;
+  height: 3000px;
+}
+.shop .rigth_item li{
+  position: sticky;
+  height: 850px;
+  top: 150px;
+}
+.shop .rigth_item img{
+  width: 500px;
+  height: 800px;
+  object-fit: cover;
 }
 
 
