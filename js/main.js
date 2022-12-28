@@ -9,44 +9,17 @@ new Swiper('.promotion .swiper', {
     centeredSlides: true
 });
 
-// const headerEl = document.querySelector('header');
-// const mainMenuEl = document.querySelector('.main-menu');
-// const subMenuEls = document.querySelectorAll('.item__contents');
-
-// mainMenuEl.addEventListener('mouseover', function () {
-//     headerEl.style.height = '380px';
-
-//     subMenuEls.forEach(function (subMenuEl) {
-//         subMenuEl.style.opacity = '1';
-//         subMenuEl.style.visibility = 'visible';
-//     });
-// });
-
-// headerEl.addEventListener('mouseleave', function () {
-//     headerEl.style.height = '150px';
-
-//     subMenuEls.forEach(function (subMenuEl) {
-//         subMenuEl.style.opacity = '0';
-//         subMenuEl.style.visibility = 'hidden';
-//     });
-// });
-
 const iconsEls = document.querySelectorAll('.icons-group');
 const guideEls = document.querySelectorAll('.guide-group');
 
-// 반복되게 만들기
-iconsEls.forEach(function(iconsEl){
+iconsEls.forEach(function(iconsEl, clickIndex){
     iconsEl.addEventListener('click',function(){
-        guideEls.forEach(function(guideEl){
-        guideEl.classList.remove('active');
+        guideEls.forEach(function(guideEl, index){
+            if(clickIndex !== index){
+                guideEl.classList.remove('active');
+            }
         });
-        iconsEl.nextElementSibling.classList.add('active');
-        iconsEl.addEventListener('click',function(){
-            guideEls.forEach(function(guideEl){
-                guideEl.classList.remove('hide');
-            });
-            iconsEl.nextElementSibling.classList.add('hide'); 
-        });
+        iconsEl.nextElementSibling.classList.toggle('active');
     });
 });
 
