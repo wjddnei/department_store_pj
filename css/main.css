@@ -8,6 +8,9 @@ a{
 img{
   user-select: none;
 }
+.red{
+  color: red;
+}
 .inner{
   width: 1400px;
   margin: 0 auto;
@@ -255,7 +258,12 @@ footer .inner .text_top{
   height: 80px;
   background-color: rgb(54, 54, 54);
 }
+footer .inner .text_top .menu{
+  display: flex;
+  justify-content: center;
+}
 footer .inner .text_bottom{
   background-color: rgba(207, 207, 207, 0.336);
   height: 200px;
+  display: flex;
 }
